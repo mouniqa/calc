@@ -10,7 +10,7 @@ var CalcCtrl = function($timeout, $scope) {
   };
   $scope.operator = $scope.operators.ADDITION;
 
-  $scope.doAddition = function() {
+  $scope.doOperation = function() {
     var times = 5;
     $scope.latest = '. ';
     $timeout(function tickslowly() {
