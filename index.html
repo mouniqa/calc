@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html ng-app="calculator">
+<head>
+  <script src="./angular.min.js"></script>
+  <script src="./calc.js"></script>
+  <link href="./bootstrap.css" rel="stylesheet">
+</head>
+<style>
+  .container {
+    padding: 250px 0;
+    text-align: center;
+  }
+  </style>
+<body class="ng-cloak">
+  <div ng-controller="CalcCtrl" class="container">
+    <div>
+      <h3 style="color:rgb(42, 173, 99);">Simple Calculator App</h3>
+      <form class="form-inline">
+        <input ng-model="first" type="text" class="input-small" style="color:blue"/>
+        <select ng-model="operator" class="span1"
+                ng-options="value for (key, value) in operators"
+                style="color: rgb(90, 12, 12);">
+        </select>
+        <input ng-model="second" type="text" class="input-small" style="color:blue";/>
+        <br>
+        <br>
+        <button ng-click="doAddition()" id="gobutton" class="btn" style="color:steelblue;">Result</button>
+        <h2 style="color:tomato">{{latest}}</h2>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
